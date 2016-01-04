@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/fragment_article_detail_wv_article"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.android.cardview.fab.FloatingActionMenu
+        android:id="@+id/fragment_article_detail_fam_attachments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|right"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_icon="@drawable/ic_attachment">
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_image"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_image" />
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_video"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_video" />
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_audio"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_audio" />
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_table"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_table" />
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_figure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_figure"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_figure" />
+
+        <com.example.android.cardview.fab.FloatingActionButton
+            android:id="@+id/fragment_article_detail_fab_attachment_other_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_other_file"
+            fab:fab_size="mini"
+            fab:paddingStart="@dimen/margin_tiny"
+            fab:fab_label="@string/fab_attachment_other_files" />
+
+    </com.example.android.cardview.fab.FloatingActionMenu>
+
+</FrameLayout>

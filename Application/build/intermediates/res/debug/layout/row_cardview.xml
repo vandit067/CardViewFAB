@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="2dp"
+        card_view:theme="@style/AppTheme"
+        card_view:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/listcell_outer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_imageview_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/issue_image"
+                        android:layout_width="@dimen/single_journal_coverimage_width"
+                        android:layout_height="@dimen/single_journal_coverimage_height"
+                        android:background="@drawable/shape_rect_border"
+                        android:padding="1dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/journal" />
+
+                    <ImageView
+                        android:id="@+id/multi_journal_imageview_cover_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/issue_image"
+                        android:background="@drawable/icon_header_free_badge"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <include layout="@layout/e_open_access_text" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/listcell_inner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/multi_journal_current_issue_strip_height"
+                android:paddingBottom="5dp"
+                android:background="#F9F8F6"
+                android:paddingLeft="@dimen/multi_journal_ouetrlist_cell_padding"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/issue_type"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="false"
+                    android:text="Current Issue  "
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/hs_extra_small_text" />
+
+                <TextView
+                    android:id="@+id/month_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/issue_type"
+                    android:layout_toRightOf="@+id/issue_type"
+                    android:text="July 10 , 2015"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/hs_extra_small_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/issue_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/month_name"
+                    android:layout_below="@+id/month_name"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Vol 15 No. 3, p249-360"
+                    android:paddingRight="@dimen/multi_journal_issu_info_padding"
+                    android:textSize="@dimen/hs_small_text" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+<!-- From: file:/C:/Elsevier/Workspace/Samples/CardView/Application/src/main/res/layout/row_cardview.xml -->

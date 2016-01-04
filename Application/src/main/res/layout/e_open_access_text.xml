@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/multi_journal_headertext_margin_left"
+    android:paddingRight="@dimen/multi_journal_headertext_margin_left">
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black" />
+
+    <!--<com.elsevier.jbsm.view.WordMarkTextView-->
+    <!--android:id="@+id/e_open_access_status_tv"-->
+    <!--style="@style/OpenAccessText" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/e_open_access_since_time_tv"-->
+    <!--style="@style/SinceTimeText" />-->
+
+    <TextView
+        android:id="@+id/e_open_archive_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
